@@ -85,6 +85,41 @@ meme-generator/
 | `npm run build`   | Build for production           |
 | `npm run preview` | Preview production build      |
 
+## Publishing with GitHub Pages
+
+The repo includes a GitHub Actions workflow that builds and deploys the app to GitHub Pages whenever you push to the `main` branch.
+
+### One-time setup
+
+1. **Push the repo to GitHub** (if you haven’t already).
+
+2. **Turn on GitHub Pages** and use the new deployment flow:
+   - Open your repo on GitHub → **Settings** → **Pages**.
+   - Under **Build and deployment**:
+     - **Source**: select **GitHub Actions**.
+
+3. **Trigger a deploy**  
+   Push a commit to `main` (or run the workflow from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**).  
+   The first run may need a few minutes; later runs run on each push to `main`.
+
+4. **Open your site**  
+   After the workflow completes, the site will be at:
+   ```text
+   https://<your-username>.github.io/<repo-name>/
+   ```
+   Example: if your repo is `https://github.com/jane/meme-generator`, the app is at `https://jane.github.io/meme-generator/`.
+
+### Local production build with the same base (optional)
+
+To preview the same paths as GitHub Pages locally (e.g. at `http://localhost:4173/meme-generator/`):
+
+```bash
+npm run build -- --base=/meme-generator/
+npm run preview
+```
+
+Use your actual repo name instead of `meme-generator` if it’s different.
+
 ## License
 
 See the [LICENSE](LICENSE) file in the repository, if present.
