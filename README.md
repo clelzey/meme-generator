@@ -87,7 +87,7 @@ meme-generator/
 
 ## Publishing with GitHub Pages
 
-The repo includes a GitHub Actions workflow that builds and deploys the app to GitHub Pages whenever you push to the `main` branch.
+The repo includes a GitHub Actions workflow that builds and deploys the app to GitHub Pages whenever you push to the `master` branch.
 
 ### One-time setup
 
@@ -99,8 +99,8 @@ The repo includes a GitHub Actions workflow that builds and deploys the app to G
      - **Source**: select **GitHub Actions**.
 
 3. **Trigger a deploy**  
-   Push a commit to `main` (or run the workflow from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**).  
-   The first run may need a few minutes; later runs run on each push to `main`.
+   Push a commit to `master` (or run the workflow from the **Actions** tab → **Deploy to GitHub Pages** → **Run workflow**).  
+   The first run may need a few minutes; later runs run on each push to `master`.
 
 4. **Open your site**  
    After the workflow completes, the site will be at:
